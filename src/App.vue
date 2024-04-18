@@ -21,11 +21,16 @@ import { RouterLink, RouterView } from 'vue-router';
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink :to="{ name: 'counter' }">Counter</RouterLink>
+        <RouterLink :to="{ name: 'users' }">Users</RouterLink>
       </nav>
     </div>
   </div>
 
-  <RouterView />
+  <router-view v-slot="{ Component }">
+    <keep-alive>
+      <component :is="Component" />
+    </keep-alive>
+  </router-view>
 </template>
 
 <style scoped>
