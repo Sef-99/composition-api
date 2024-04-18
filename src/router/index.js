@@ -27,6 +27,18 @@ const router = createRouter({
       name: 'users',
       component: () => import('../views/UserView.vue'),
     },
+    {
+      path: '/pokemon-search',
+      name: 'pokemon-search',
+      component: () =>
+        import(/* webpackChunkName: "counter" */ '../views/SearchPokemon.vue'),
+    },
+    {
+      path: '/pokemon/:id',
+      name: 'pokemon-id',
+      component: () =>
+        import(/* webpackChunkName: "counter" */ '../views/Pokemon.vue'),
+    },
   ],
 });
 

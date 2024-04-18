@@ -15,13 +15,12 @@ import { RouterLink, RouterView } from 'vue-router';
     </header>
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink :to="{ name: 'counter' }">Counter</RouterLink>
         <RouterLink :to="{ name: 'users' }">Users</RouterLink>
+        <RouterLink :to="{ name: 'pokemon-search' }">Search Pokemon</RouterLink>
       </nav>
     </div>
   </div>
