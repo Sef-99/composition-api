@@ -1,6 +1,6 @@
 <template>
-  <h2 v-if="isLoading">Espere por favor...</h2>
-  <h2 v-else>Usuarios</h2>
+  <h2 v-if="isLoading">Loading...</h2>
+  <h2 v-else>Users</h2>
   <h5 v-if="errorMessage">{{ errorMessage }}</h5>
 
   <div v-if="users.length > 0">
@@ -12,9 +12,9 @@
     </ul>
   </div>
 
-  <button @click="prevPage">Atras</button>
-  <button @click="nextPage">Siguiente</button>
-  <span> Página: {{ currentPage }}</span>
+  <button @click="prevPage">Back</button>
+  <button @click="nextPage">Next</button>
+  <span> Page: {{ currentPage }}</span>
 </template>
 
 <script setup>

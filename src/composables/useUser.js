@@ -23,7 +23,7 @@ const useUsers = () => {
       currentPage.value = page;
       errorMessage.value = null;
     } else if (currentPage.value > 0) {
-      errorMessage.value = 'No hay mas usuarios';
+      errorMessage.value = 'No more users';
     }
 
     isLoading.value = false;
